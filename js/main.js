@@ -165,13 +165,8 @@
     });
 
 
-    // $(window).scroll(function () {
-        
-    //     if (isOverlain = true && $(this).scrollTop() > 10) {
-    //         $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
-    //     } 
-    // });
 
+    // Buka Undangan
     $('#open-invitation').click(function (){
 		$('#overlay').addClass('hide-overlay');
 
@@ -180,7 +175,7 @@
 
 
         let isPLaying = false;
-        
+
         const audio = document.querySelector("#audioplay audio");
         if (!isPLaying) {
             console.log("play")
