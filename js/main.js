@@ -11,6 +11,43 @@
     });
 
 
+
+    $(window).scroll(function () {
+        $('.section-title').each(function (i) {
+
+            $(this).css('opacity', '0');
+
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it in */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).addClass("fade-in");
+
+            }
+        })
+    })
+
+
+    $(window).scroll(function () {
+        $('.col-md-6').each(function (i) {
+
+            $(this).css('opacity', '0');
+
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            /* If the object is completely visible in the window, fade it in */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).addClass("fade-in");
+
+            }
+        })
+    })
+
+
     // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
@@ -112,6 +149,46 @@
             }
         }
     });
+
+
+    // Countdown
+    $('#clock').countdown('2025/09/26', function (event) {
+        $(this).html(event.strftime(
+            '<div class="position-relative text-center"><div class="mb-3"><h3>%D</h3><span>Days</span></div><div class="mb-3"><h3>%H</h3><span>Hours</span></div><div class="mb-3"><h3>%M</h3><span>Minutes</span></div><div class="mb-3"><h3>%S</h3><span>Seconds</span></div></div>'
+        ));
+    });
+
+
+
+    $('#open-invitation').click(function (){
+		$('#overlay').addClass('hide-overlay');
+
+        // const audio = document.getElementById('audioplay');
+        // audio.play();
+
+        let isPLaying = false;
+
+        const audio = document.querySelector("#audioplay audio");
+        if (!isPLaying) {
+            console.log("play")
+            audio.play();
+            isPLaying = true
+        }
+	});
+
+
+    // let isPLaying = false;
+
+    // window.addEventListener('scroll', () => {
+
+    // const audio = document.querySelector("#audioplay audio");
+    // if (!isPLaying && window.scrollY > 200) {
+    //     console.log("play")
+    //     audio.play();
+    //     isPLaying = true
+    // }
+    // });
+
     
 })(jQuery);
 
