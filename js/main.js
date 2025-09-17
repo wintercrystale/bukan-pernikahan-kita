@@ -1,6 +1,12 @@
 (function ($) {
     "use strict";
 
+
+    window.onload = function () {
+        $('html, body').animate({ scrollTop: 0 }, 150, 'easeInOutExpo');
+    };
+
+
     // Navbar on scrolling
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -159,15 +165,22 @@
     });
 
 
+    // $(window).scroll(function () {
+        
+    //     if (isOverlain = true && $(this).scrollTop() > 10) {
+    //         $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+    //     } 
+    // });
 
     $('#open-invitation').click(function (){
 		$('#overlay').addClass('hide-overlay');
 
-        // const audio = document.getElementById('audioplay');
-        // audio.play();
+
+        $('html, body').animate({ scrollTop: 0 }, 150, 'easeInOutExpo');
+
 
         let isPLaying = false;
-
+        
         const audio = document.querySelector("#audioplay audio");
         if (!isPLaying) {
             console.log("play")
