@@ -9776,10 +9776,10 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .fade-in{
-  -webkit-animation: fade-in 1.2s both;
-  -moz-animation: fade-in 1.2s both;
-  -o-animation: fade-in 1.2s both;
-  animation: fade-in 1.2s both;
+  -webkit-animation: fade-in 0.75s both;
+  -moz-animation: fade-in 0.75s both;
+  -o-animation: fade-in 0.75s both;
+  animation: fade-in 0.75s both;
 }
 
 @-webkit-keyframes fade-in {
@@ -9949,4 +9949,11 @@ a.text-dark:hover, a.text-dark:focus {
     transform: scale(3);
     transform: translateY(200%);
   }
+}
+
+.custom-gia {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

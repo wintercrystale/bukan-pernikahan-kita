@@ -2,9 +2,14 @@
     "use strict";
 
 
-    window.onload = function () {
+    // Scroll back up after refresh
+    $(document).ready(function () {
         $('html, body').animate({ scrollTop: 0 }, 150, 'easeInOutExpo');
-    };
+    })
+
+    // window.onload = function () {
+    //     $('html, body').animate({ scrollTop: 0 }, 150, 'easeInOutExpo');
+    // };
 
 
     // Navbar on scrolling
@@ -19,22 +24,44 @@
 
 
     // Section title fade in
-    $(window).scroll(function () {
-        $('.section-title').each(function (i) {
+    // $(window).scroll(function () {
+    //     $('.section-title').each(function (i) {
 
-            $(this).css('opacity', '0');
+    //         $(this).css('opacity', '0');
 
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //         var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-            /* If the object is completely visible in the window, fade it in */
-            if( bottom_of_window > bottom_of_object ){
+    //         /* If the object is completely visible in the window, fade it in */
+    //         if( bottom_of_window > bottom_of_object ){
 
-                $(this).addClass("fade-in");
+    //             $(this).addClass("fade-in");
 
-            }
-        })
-    })
+    //         }
+    //     })
+    // })
+    $(window).on("load", function () {
+        $(window).scroll(function () {
+            var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+            $(".section-title").each(function () {
+                /* Check the location of each desired element */
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+                /* If the element is completely within bounds of the window, fade it in */
+                if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                    if ($(this).css("opacity") == 0) { 
+                        $(this).addClass("fade-in") 
+                        $(this).fadeTo(500, 1)
+                    }
+                } else { //object goes out of view (scrolling up)
+                    if ($(this).css("opacity") == 1) {
+                        $(this).removeClass("fade-in") 
+                        $(this).fadeTo(500, 0); 
+                    }
+                }
+            });
+        }).scroll(); //invoke scroll-handler on page-load
+    });
 
 
     // Section content fade in
@@ -54,6 +81,28 @@
     //         }
     //     })
     // })
+    $(window).on("load", function () {
+        $(window).scroll(function () {
+            var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+            $(".custom-gia").each(function () {
+                /* Check the location of each desired element */
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+                /* If the element is completely within bounds of the window, fade it in */
+                if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                    if ($(this).css("opacity") == 0) { 
+                        $(this).addClass("fade-in") 
+                        $(this).fadeTo(500, 1)
+                    }
+                } else { //object goes out of view (scrolling up)
+                    if ($(this).css("opacity") == 1) {
+                        $(this).removeClass("fade-in") 
+                        $(this).fadeTo(500, 0); 
+                    }
+                }
+            });
+        }).scroll(); //invoke scroll-handler on page-load
+    });
 
 
     // Smooth scrolling on the navbar links
