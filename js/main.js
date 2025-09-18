@@ -177,6 +177,27 @@
         return false;
     });
 
+    // Music toggle button
+    $('.music-toggle').click(function () {
+
+        const audio = document.querySelector("#audioplay audio");
+
+        if (audio.duration > 0 && !audio.paused) {
+
+            //Its playing...do your job
+            audio.pause();
+            $('.music-toggle').removeClass('music-rotate');
+
+        } else {
+
+            //Not playing...maybe paused, stopped or never played.
+            audio.play();
+            $('.music-toggle').addClass('music-rotate');
+
+        }
+        return false;
+    });
+
 
     // Gallery carousel
     $(".gallery-carousel").owlCarousel({
@@ -234,6 +255,9 @@
             audio.play();
             isPLaying = true
         }
+
+        $('.music-toggle').fadeIn('slow');
+        $('.music-toggle').addClass('music-rotate');
 	});
 
 
