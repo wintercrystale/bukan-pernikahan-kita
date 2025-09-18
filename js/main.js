@@ -18,6 +18,7 @@
 
 
 
+    // Section title fade in
     $(window).scroll(function () {
         $('.section-title').each(function (i) {
 
@@ -36,22 +37,23 @@
     })
 
 
-    $(window).scroll(function () {
-        $('.col-md-6').each(function (i) {
+    // Section content fade in
+    // $(window).scroll(function () {
+    //     $('.col-md-6').each(function (i) {
 
-            $(this).css('opacity', '0');
+    //         $(this).css('opacity', '0');
 
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
+    //         var bottom_of_object = $(this).position().top + $(this).outerHeight();
+    //         var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-            /* If the object is completely visible in the window, fade it in */
-            if( bottom_of_window > bottom_of_object ){
+    //         /* If the object is completely visible in the window, fade it in */
+    //         if( bottom_of_window > bottom_of_object ){
 
-                $(this).addClass("fade-in");
+    //             $(this).addClass("fade-in");
 
-            }
-        })
-    })
+    //         }
+    //     })
+    // })
 
 
     // Smooth scrolling on the navbar links
@@ -100,16 +102,16 @@
 
 
     // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
+    // var portfolioIsotope = $('.portfolio-container').isotope({
+    //     itemSelector: '.portfolio-item',
+    //     layoutMode: 'fitRows'
+    // });
+    // $('#portfolio-flters li').on('click', function () {
+    //     $("#portfolio-flters li").removeClass('active');
+    //     $(this).addClass('active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
+    //     portfolioIsotope.isotope({filter: $(this).data('filter')});
+    // });
     
     
     // Back to top button
@@ -120,6 +122,7 @@
             $('.back-to-top').fadeOut('slow');
         }
     });
+    
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
