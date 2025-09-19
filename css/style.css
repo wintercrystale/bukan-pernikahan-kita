@@ -9829,6 +9829,7 @@ a.text-dark:hover, a.text-dark:focus {
   -moz-animation: fade-in-slow 1.5s both;
   -o-animation: fade-in-slow 1.5s both;
   animation: fade-in-slow 1.5s both;
+  animation-delay: 0.5s;
 }
 
 @-webkit-keyframes fade-in-slow {
@@ -10157,6 +10158,7 @@ a.text-dark:hover, a.text-dark:focus {
   -moz-animation: slide-up 1.5s both;
   -o-animation: slide-up 1.5s both;
   animation: slide-up 1.5s both;
+  animation-delay: 0.5s;
 }
 
 @-webkit-keyframes slide-up {
