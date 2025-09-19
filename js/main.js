@@ -18,6 +18,16 @@
     });
 
 
+    // For testing
+    // $(window).scroll(function () {
+    //     if ($(this).scrollTop() > 200) {
+    //         $('#load-page').addClass('hide-load-page');
+    //         $('.gia-slide-up').addClass('slide-up');
+    //         $('.gia-fade-in-slow').addClass('fade-in-slow');
+    //     }
+    // });
+
+
 
     // Scroll back up after refresh
     $(document).ready(function () {
@@ -55,7 +65,7 @@
     // })
     $(window).on("load", function () {
         $(window).scroll(function () {
-            var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+            var windowBottom = $(this).scrollTop() + $(this).height();
             $(".section-title").each(function () {
                 /* Check the location of each desired element */
                 var objectBottom = $(this).offset().top + $(this).outerHeight();
@@ -288,6 +298,4 @@
 
     
 })(jQuery);
-
-
 
