@@ -2,14 +2,27 @@
     "use strict";
 
 
+    // Loading screen hide?
+    window.onload = function () {
+        //$('#load-page').addClass('hide-load-page');
+        $('.gia-slide-up').addClass('slide-up');
+        $('.gia-fade-in-slow').addClass('fade-in-slow');
+    };
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.navbar').fadeIn('slow').css('display', 'flex');
+        } else {
+            $('.navbar').fadeOut('slow').css('display', 'none');
+        }
+    });
+
+
+
     // Scroll back up after refresh
     $(document).ready(function () {
         $('html, body').animate({ scrollTop: 0 }, 150, 'easeInOutExpo');
     })
-
-    // window.onload = function () {
-    //     $('html, body').animate({ scrollTop: 0 }, 150, 'easeInOutExpo');
-    // };
 
 
     // Navbar on scrolling
