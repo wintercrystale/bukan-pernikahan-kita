@@ -3,11 +3,11 @@
 
 
     // Loading screen hide?
-    window.onload = function () {
+    $(window).on("load", function () {
         //$('#load-page').addClass('hide-load-page');
         $('.gia-slide-up').addClass('slide-up');
         $('.gia-fade-in-slow').addClass('fade-in-slow');
-    };
+    });
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -288,4 +288,5 @@
 
     
 })(jQuery);
+
 
