@@ -9742,7 +9742,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .bg-gallery {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/gallery.jpeg), no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/gallery.jpg), no-repeat center center;
   background-size: cover;
 }
 
@@ -10090,7 +10090,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .flowers-bottom-left{
   position: fixed;
-  bottom: -250px;
+  bottom: -200px;
   left: -140px;
   rotate: 30deg;
   z-index:1988;
@@ -10098,7 +10098,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .flowers-bottom-right{
   position: fixed;
-  bottom: -250px;
+  bottom: -200px;
   right: -140px;
   rotate: 300deg;
   z-index:1989;
