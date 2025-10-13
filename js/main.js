@@ -254,7 +254,7 @@
 
 
     // Countdown
-    $('#clock').countdown('2025/10/13', function (event) {
+    $('#clock').countdown('2025/11/15 09:00:00', function (event) {
         $(this).html(event.strftime(
             '<div class="position-relative text-center"><div class="mb-3"><h3>%D</h3><span>Days</span></div><div class="mb-3"><h3>%H</h3><span>Hours</span></div><div class="mb-3"><h3>%M</h3><span>Minutes</span></div><div class="mb-3"><h3>%S</h3><span>Seconds</span></div></div>'
         ));

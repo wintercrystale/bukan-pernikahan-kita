@@ -10021,8 +10021,8 @@ a.text-dark:hover, a.text-dark:focus {
   /* scale: 0.2; */
   display: none;
   text-align: center;
-  left: 25px;
-  bottom: 35px;
+  left: 15px;
+  bottom: 25px;
   z-index: 11;
   /* animation: rotation 4s linear infinite; */
 }
